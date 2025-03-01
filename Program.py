@@ -5,12 +5,12 @@
 from BaseElement import BaseElement
 
 
-class Variable(BaseElement):
+class Program(BaseElement):
     # Attributes
-    __data_type = None
+    __author_name = None
 
     # Constructors
-    def __init__(self, name, data_type="Any", element_type="Variable"):
+    def __init__(self, name, data_type="Any", element_type="Program"):
         super().__init__(name, element_type)
         self.set_data_type(data_type)
 

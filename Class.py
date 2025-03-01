@@ -3,7 +3,6 @@
 
 
 from BaseElement import BaseElement
-from Variable import Variable
 
 
 class Class(BaseElement):
@@ -12,11 +11,9 @@ class Class(BaseElement):
     __methods = None
     __base_class = None
 
-
     # Separators
     __FUNCTION_SEPARATOR = "\n\n"
-    __CATEGORY_SEPARATOR = "\n\n\n"
-
+    __CATEGORY_SEPARATOR = "\n\n"
 
     # Constructors
     def __init__(self, name, attributes=None, methods=None, base_class=None, element_type="Class"):
@@ -25,8 +22,7 @@ class Class(BaseElement):
         self.set_methods(methods)
         self.set_base_class(base_class)
 
-
-    # Abstract Methods
+    # Methods
     def generate(self):
         return (
             f"{self.generate_header()}"
@@ -38,8 +34,6 @@ class Class(BaseElement):
             f"{self.__CATEGORY_SEPARATOR}{self.indent(self.generate_tostring(), 1)}"
         )
 
-
-    # Methods
     def get_attribute_names(self):
         attribute_names = []
 
@@ -134,7 +128,6 @@ class Class(BaseElement):
 
         return tostring
 
-
     # Getters
     def get_attributes(self):
         return self.__attributes
@@ -144,7 +137,6 @@ class Class(BaseElement):
 
     def get_base_class(self):
         return self.__base_class
-
 
     # Setters
     def set_attributes(self, attributes):

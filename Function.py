@@ -14,7 +14,6 @@ class Function(Variable):
             for parameter in parameters:
                 self.add_child(parameter)
 
-
     # Methods
     def get_children_names(self):
         children_names = []

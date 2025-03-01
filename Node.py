@@ -7,12 +7,10 @@ class Node:
     __parent = None
     __children = None
 
-
     # Constructors
     def __init__(self):
         self.set_parent(None)
         self.set_children([])
-
 
     # Methods
     def add_child(self, child):
@@ -38,14 +36,12 @@ class Node:
 
         return depth
 
-
     # Getters
     def get_parent(self):
         return self.__parent
 
     def get_children(self):
         return self.__children
-
 
     # Setters
     def set_parent(self, parent):
