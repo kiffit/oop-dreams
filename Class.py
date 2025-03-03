@@ -52,6 +52,14 @@ class Class(BaseElement):
 
         return inherited_attribute_names
 
+    def generate_imports(self):
+        if self.get_base_class() is None:
+            return ""
+
+        return (
+            f"from {self.get_base_class().get_name()} import {self.get_base_class().get_name()}"
+        )
+
     def generate_header(self):
         header = f"class {self.get_name()}:"
 

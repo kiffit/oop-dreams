@@ -31,6 +31,6 @@ class Function(Variable):
 
     def generate_method(self):
         return (
-            f"def {self.get_name()}(self, {", ".join(self.get_children_names())}):"
+            f"def {self.get_name()}({", ".join(["self"] + self.get_children_names())}):"
             f"\n\tpass"
         )
